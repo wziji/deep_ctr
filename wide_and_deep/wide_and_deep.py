@@ -106,7 +106,7 @@ if __name__ == "__main__":
                      classification = classification)
     
     print(model.summary())
-    tf.keras.utils.plot_model(model, to_file='wide&deep_model.png', show_shapes=True)
+    tf.keras.utils.plot_model(model, to_file='wide_and_deep_model.png', show_shapes=True)
     
 
     model.compile(loss="sparse_categorical_crossentropy", optimizer="adam", metrics=['accuracy'])
