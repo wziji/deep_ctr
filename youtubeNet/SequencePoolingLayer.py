@@ -1,3 +1,6 @@
+#-*- coding:utf-8 -*-
+
+
 import tensorflow as tf
 from tensorflow.keras.layers import Lambda, Layer
 
@@ -71,7 +74,11 @@ class SequencePoolingLayer(Layer):
                 return tf.divide(mode_sum, \
                     tf.cast(hist_user_behavior_length, tf.float32) + self.eps)
 
-
+            
+    def compute_output_shape(self, input_shape):
+        return (None, 1, input_shape[0][-1])
+        
+        
     def config(self):
         config = {"mode": self.mode, "support_mask": self.support_mask, \
             "sequence_mask_length": self.sequence_mask_length}
