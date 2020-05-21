@@ -24,20 +24,14 @@ def wide_and_deep(
     input_layer_dict = {}
     input_layer_list = []
     
-    
-    # 1.1 finetune feature
-    user_finetune_embedding = Input(shape=(128, ), dtype = 'float32', name="user_finetune_embedding")
-    input_layer_list.append(user_finetune_embedding)
-    input_layer_dict["user_finetune_embedding"] = tf.expand_dims(user_finetune_embedding, 1)
-    
-    
-    # 1.2 sparse feature
+
+    # 1.1 sparse feature
     for f in sparse_feature_list:
         input_layer_dict[f] = Input(shape=(sparse_input_length, ), name=f+"_input_layer")
         input_layer_list.append(input_layer_dict[f])
         
         
-    # 1.3 dense feature
+    # 1.2 dense feature
     for f in dense_feature_list:
         row_dense_input_layer = Input(shape=(dense_input_length, ), name=f+"_input_layer")
         input_layer_list.append(row_dense_input_layer)
@@ -55,8 +49,7 @@ def wide_and_deep(
     
     
     # 2.2 concat
-    concat_layer = concatenate([input_layer_dict["user_finetune_embedding"]] + \
-                                [embedding_layer_dict[i] for i in sparse_feature_list] + \
+    concat_layer = concatenate([embedding_layer_dict[i] for i in sparse_feature_list] + \
                                 [input_layer_dict[j] for j in dense_feature_list], \
                                axis=-1)
     
@@ -64,8 +57,7 @@ def wide_and_deep(
 
     # 3. Linear part
     linear_part = Dense(1, activation='linear')(concat_layer)
-    print("linear_part: ", linear_part)
-    
+
     
     
     # 4. Deep part
@@ -74,15 +66,19 @@ def wide_and_deep(
     for i, u in enumerate(hidden_unit_list):
         deep_part = Dense(u, activation="relu", name="FC_{0}".format(i+1))(deep_part)
         deep_part = Dropout(0.3)(deep_part)
-        
-    print("deep_part: ", deep_part)
-    print("\n" * 3)
 
     
     
     # Output
     output = tf.keras.layers.concatenate([linear_part, deep_part], axis=-1)
-    output = Dense(classification, activation="softmax")(output)
+    
+    # Multi-classification
+    if classification > 2: 
+        output = Dense(classification, activation="softmax")(output)
+        
+    # Binary-classification
+    else:
+        output = Dense(1, activation="sigmoid")(output)
     
     
     model = Model(inputs = input_layer_list, \
@@ -98,7 +94,7 @@ if __name__ == "__main__":
     sparse_feature_list = ["user_id", "gender", "age", "item_id"]
     sparse_feature_vocabulary_size_list = [100, 2, 10, 500]
     dense_feature_list = ["click_count", "sales_count"]
-    classification = 10
+    classification = 2
 
     model = wide_and_deep(sparse_feature_list=sparse_feature_list, \
                      sparse_feature_vocabulary_size_list = sparse_feature_vocabulary_size_list, \
@@ -109,8 +105,15 @@ if __name__ == "__main__":
     tf.keras.utils.plot_model(model, to_file='wide_and_deep_model.png', show_shapes=True)
     
 
-    model.compile(loss="sparse_categorical_crossentropy", optimizer="adam", metrics=['accuracy'])
+    # Multi-classification
+    if classification > 2:
+        model.compile(loss="sparse_categorical_crossentropy", optimizer="adam", metrics=['accuracy'])
     
+    # Binary-classification
+    else:
+        model.compile(loss="binary_crossentropy", optimizer="adam", metrics=['accuracy'])
+    
+
     early_stopping_cb = EarlyStopping(monitor='val_loss', patience=10, restore_best_weights=True)
     callbacks = [early_stopping_cb]
 
