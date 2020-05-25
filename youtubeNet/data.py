@@ -9,6 +9,7 @@
 
 
 import pandas as pd
+import numpy as np
 
 from preprocess import gen_data_set, gen_model_input
 from sklearn.preprocessing import LabelEncoder

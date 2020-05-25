@@ -49,8 +49,10 @@ def YouTubeNet(
     neg_item_sample_embedding_layer = item_id_embedding_layer(neg_item_sample_input_layer)
     
     user_click_item_seq_embedding_layer = item_id_embedding_layer(user_click_item_seq_input_layer)
-    user_click_item_seq_embedding_layer = SequencePoolingLayer(sequence_mask_length=sparse_seq_input_length)\
-        ([user_click_item_seq_embedding_layer, user_click_item_seq_length_input_layer])
+    #user_click_item_seq_embedding_layer = SequencePoolingLayer(sequence_mask_length=sparse_seq_input_length)\
+    #    ([user_click_item_seq_embedding_layer, user_click_item_seq_length_input_layer])
+
+    user_click_item_seq_embedding_layer  = tf.reduce_mean(user_click_item_seq_embedding_layer, 1, keepdims=True)
 
     
 
