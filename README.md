@@ -3,6 +3,8 @@
 
 ## recall
 
+> word2vec论文: [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/abs/1301.3781v3)
+
 > YouTubeNet论文: Deep Neural Networks for YouTube Recommendations
 
 
