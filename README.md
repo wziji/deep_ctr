@@ -7,6 +7,8 @@
 
 > YouTubeNet论文: Deep Neural Networks for YouTube Recommendations
 
+> mind论文：[Multi-Interest Network with Dynamic Routing for Recommendation at Tmall](https://arxiv.org/abs/1904.08030v1)
+
 
 ## rank
 
@@ -16,3 +18,10 @@
 ## 多任务 rank 
 
 > esmm论文: [Entire Space Multi-Task Model: An Effective Approach for Estimating Post-Click Conversion Rate](https://arxiv.org/abs/1804.07931)
+
+
+## 代码参考：
+
+> https://github.com/shenweichen/DeepCTR
+
+> https://github.com/shenweichen/DeepMatch
