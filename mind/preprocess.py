@@ -33,6 +33,7 @@ def gen_data_set(data, negsample=0):
 
     return train_set,test_set
 
+
 def gen_model_input(train_set,user_profile,seq_max_len):
 
     train_uid = np.array([line[0] for line in train_set])
