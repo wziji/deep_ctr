@@ -13,6 +13,7 @@
 ## rank
 
 > FFM论文：[Field-aware Factorization Machines for CTR Prediction](https://www.csie.ntu.edu.tw/~cjlin/papers/ffm.pdf)
+
 > wide_and_deep论文: [Wide & Deep Learning for Recommender Systems](https://arxiv.org/abs/1606.07792)
 
 

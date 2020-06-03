@@ -75,6 +75,8 @@ None
 # 参考
 
 ```python
+
 1. [FFM及DeepFFM模型在推荐系统的探索](https://zhuanlan.zhihu.com/p/67795161)
+
 2. https://github.com/shenweichen/DeepCTR/blob/master/deepctr/layers/interaction.py
 ```
