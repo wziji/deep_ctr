@@ -13,3 +13,4 @@ chmod +x word2vec
 
 sh train_w2v_model.sh
 ```
+
