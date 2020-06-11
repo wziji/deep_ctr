@@ -99,3 +99,8 @@ Epoch 1/2
 Epoch 2/2
 989/989 [==============================] - 58s 58ms/step - loss: 1.5146 - sparse_categorical_accuracy: 0.4323 - val_loss: 1.5995 - val_sparse_categorical_accuracy: 0.4144
 ```
+
+
+# 参考
+
+[https://github.com/shenweichen/DeepMatch/blob/master/examples/colab_MovieLen1M_YoutubeDNN.ipynb](https://github.com/shenweichen/DeepMatch/blob/master/examples/colab_MovieLen1M_YoutubeDNN.ipynb)

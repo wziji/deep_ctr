@@ -113,3 +113,8 @@ Epoch 1/2
 Epoch 2/2
 989/989 [==============================] - 131s 133ms/step - loss: 1.3553 - sparse_categorical_accuracy: 0.4910 - val_loss: 1.4716 - val_sparse_categorical_accuracy: 0.4604
 ```
+
+
+# 参考
+
+[https://github.com/shenweichen/DeepMatch/blob/master/deepmatch/models/mind.py](https://github.com/shenweichen/DeepMatch/blob/master/deepmatch/models/mind.py)
