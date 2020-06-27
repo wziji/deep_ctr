@@ -16,6 +16,8 @@
 
 > wide_and_deep论文: [Wide & Deep Learning for Recommender Systems](https://arxiv.org/abs/1606.07792)
 
+> AFM论文：[Attentional Factorization Machines: Learning the Weight of Feature Interactions via Attention Networks](https://arxiv.org/pdf/1708.04617.pdf)
+
 
 ## 多任务 rank 
 
