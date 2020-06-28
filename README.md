@@ -16,6 +16,8 @@
 
 > wide_and_deep论文: [Wide & Deep Learning for Recommender Systems](https://arxiv.org/abs/1606.07792)
 
+> NFM论文：[Neural Factorization Machines for Sparse Predictive Analytics](https://arxiv.org/pdf/1708.05027.pdf)
+
 > AFM论文：[Attentional Factorization Machines: Learning the Weight of Feature Interactions via Attention Networks](https://arxiv.org/pdf/1708.04617.pdf)
 
 > DeepFM论文：[DeepFM: A Factorization-Machine based Neural Network for CTR Prediction](https://arxiv.org/abs/1703.04247)
