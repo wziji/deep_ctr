@@ -85,7 +85,7 @@ None
 
 ```python
 
-1. [DeepFM: A Factorization-Machine based Neural Network for CTR Prediction](https://arxiv.org/abs/1703.04247)
+1. DeepFM: A Factorization-Machine based Neural Network for CTR Prediction
 
 2. https://github.com/shenweichen/DeepCTR
 ```
