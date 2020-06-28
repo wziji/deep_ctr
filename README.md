@@ -1,7 +1,7 @@
 # 点击预估模型
 
 
-## recall
+## Recall
 
 > word2vec论文: [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/abs/1301.3781v3)
 
@@ -10,7 +10,7 @@
 > mind论文：[Multi-Interest Network with Dynamic Routing for Recommendation at Tmall](https://arxiv.org/abs/1904.08030v1)
 
 
-## rank
+## Rank
 
 > FFM论文：[Field-aware Factorization Machines for CTR Prediction](https://www.csie.ntu.edu.tw/~cjlin/papers/ffm.pdf)
 
@@ -21,7 +21,7 @@
 > DeepFM论文：[DeepFM: A Factorization-Machine based Neural Network for CTR Prediction](https://arxiv.org/abs/1703.04247)
 
 
-## 多任务 rank 
+## 多任务 Rank
 
 > esmm论文: [Entire Space Multi-Task Model: An Effective Approach for Estimating Post-Click Conversion Rate](https://arxiv.org/abs/1804.07931)
 
