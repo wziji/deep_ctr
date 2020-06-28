@@ -1,7 +1,7 @@
 # 点击预估模型
 
 
-## Recall
+## 1. Recall
 
 | 算法        | 论文    |  公众号文章介绍  |
 | --------    | -----  | ----            |
@@ -10,7 +10,7 @@
 | mind            | [Multi-Interest Network with Dynamic Routing for Recommendation at Tmall](https://arxiv.org/abs/1904.08030v1) | [推荐系统召回模型之MIND用户多兴趣网络实践](https://mp.weixin.qq.com/s/Ys4EZw97ulrcBWFdN1OMyQ) |
 
 
-## Rank
+## 2. Rank
 
 | 算法        | 论文    |  公众号文章介绍  |
 | --------    | -----  | ----            |
@@ -22,7 +22,7 @@
 
 
 
-## 多任务 Rank
+## 3. 多任务 Rank
 
 | 算法        | 论文    |  公众号文章介绍  |
 | --------    | -----  | ----            |
@@ -31,7 +31,7 @@
 
 
 
-## 代码参考：
+# 代码参考
 
 > https://github.com/shenweichen/DeepCTR
 
