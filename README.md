@@ -3,6 +3,12 @@
 
 ## Recall
 
+| 算法        | 论文    |  公众号文章介绍  |
+| --------   | -----:   | :----: |
+| word2vec        | [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/abs/1301.3781v3) |  |
+| YouTubeNet      | Deep Neural Networks for YouTube Recommendations | [推荐系统召回模型之YouTubeNet](https://mp.weixin.qq.com/s/hiabDQW0qGfgPwiZdiZ_Mg) |
+| mind            | [Multi-Interest Network with Dynamic Routing for Recommendation at Tmall](https://arxiv.org/abs/1904.08030v1) | [推荐系统召回模型之MIND用户多兴趣网络实践](https://mp.weixin.qq.com/s/Ys4EZw97ulrcBWFdN1OMyQ) |
+
 > word2vec论文: [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/abs/1301.3781v3)
 
 > YouTubeNet论文: Deep Neural Networks for YouTube Recommendations，公众号文章介绍：[推荐系统召回模型之YouTubeNet](https://mp.weixin.qq.com/s/hiabDQW0qGfgPwiZdiZ_Mg)
