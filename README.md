@@ -6,7 +6,8 @@
 | 算法        | 论文    |  公众号或知乎文章介绍  |
 | --------    | -----  | ----            |
 | word2vec        | [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/abs/1301.3781v3) |  |
-| YouTubeNet      | Deep Neural Networks for YouTube Recommendations | [推荐系统召回模型之YouTubeNet](https://mp.weixin.qq.com/s/hiabDQW0qGfgPwiZdiZ_Mg) |
+| YouTubeNet      | [Deep Neural Networks for YouTube Recommendations](https://www.sci-hub.ren/10.1145/2959100.2959190) | [推荐系统召回模型之YouTubeNet](https://mp.weixin.qq.com/s/hiabDQW0qGfgPwiZdiZ_Mg) |
+| DSSM      | [Sampling-Bias-Corrected Neural Modeling for Large Corpus Item Recommendations](https://www.sci-hub.ren/10.1145/3298689.3346996) | [实践DSSM召回模型](https://zhuanlan.zhihu.com/p/136253355) |
 | mind            | [Multi-Interest Network with Dynamic Routing for Recommendation at Tmall](https://arxiv.org/abs/1904.08030v1) | [推荐系统召回模型之MIND用户多兴趣网络实践](https://mp.weixin.qq.com/s/Ys4EZw97ulrcBWFdN1OMyQ) |
 
 
