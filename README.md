@@ -31,6 +31,13 @@
 | MMoE      | [Modeling Task Relationships in Multi-task Learning with Multi-gate Mixture-of-Experts](https://dl.acm.org/doi/10.1145/3219819.3220007) | [多任务学习之MMOE模型](https://mp.weixin.qq.com/s/cBy0Y5xDtkc6PxhF1HNomg) |
 
 
+## 4. recall_search
+
+| 算法        | 开源地址    |  公众号文章介绍  |
+| --------    | -----  | ----            |
+| Annoy        | [https://github.com/spotify/annoy](https://github.com/spotify/annoy) | [Annoy最近邻检索技术之 “图片检索”](https://zhuanlan.zhihu.com/p/148819536) |
+
+
 
 # 代码参考
 
