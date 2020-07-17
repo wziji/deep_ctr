@@ -20,6 +20,7 @@
 | NFM            | [Neural Factorization Machines for Sparse Predictive Analytics](https://arxiv.org/pdf/1708.05027.pdf) | [NFM模型理论与实践](https://mp.weixin.qq.com/s/1sWYlzIydiLAPMBnr-a5sQ) |
 | AFM            | [Attentional Factorization Machines: Learning the Weight of Feature Interactions via Attention Networks](https://arxiv.org/pdf/1708.04617.pdf) | [注意力机制在深度推荐算法中的应用之AFM模型](https://mp.weixin.qq.com/s/sj5bxwtgiw-SaIItsjbeew) |
 | DeepFM            | [DeepFM: A Factorization-Machine based Neural Network for CTR Prediction](https://arxiv.org/abs/1703.04247) | [DeepFM实践](https://zhuanlan.zhihu.com/p/137894818) |
+| BST            | [Behavior sequence transformer for e-commerce recommendation in Alibaba](https://arxiv.org/pdf/1905.06874.pdf) | [Transformer 在美团搜索排序中的实践](https://zhuanlan.zhihu.com/p/161311198) |
 
 
 
