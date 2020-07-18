@@ -1,5 +1,8 @@
 # tf.version == '2.1.0'
 
+# 运行
+
++ python bst_model.py 
 
 
 # 模型 summary
@@ -95,4 +98,6 @@ None
 1. Behavior sequence transformer for e-commerce recommendation in Alibaba
 
 2. https://zhuanlan.zhihu.com/p/161311198
+
+3. https://github.com/czy36mengfei/tensorflow2_tutorials_chinese/tree/master/026-Transformer
 ```
