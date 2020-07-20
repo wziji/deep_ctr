@@ -6,6 +6,7 @@
 
 
 # 模型 summary
+
 ```python
 __________________________________________________________________________________________________
 Layer (type)                    Output Shape         Param #     Connected to                     
@@ -14,28 +15,21 @@ user_click_item_seq_input_layer [(None, 50)]         0
 __________________________________________________________________________________________________
 item_input_layer (InputLayer)   [(None, 1)]          0                                            
 __________________________________________________________________________________________________
-user_click_cate_seq_input_layer [(None, 50)]         0                                            
-__________________________________________________________________________________________________
 cate_input_layer (InputLayer)   [(None, 1)]          0                                            
 __________________________________________________________________________________________________
-concatenate_92 (Concatenate)    (None, 51)           0           user_click_item_seq_input_layer[0
+user_click_cate_seq_input_layer [(None, 50)]         0                                            
+__________________________________________________________________________________________________
+tf_op_layer_Equal (TensorFlowOp [(None, 50)]         0           user_click_item_seq_input_layer[0
+__________________________________________________________________________________________________
+item_id_embedding (Embedding)   multiple             2560512     user_click_item_seq_input_layer[0
                                                                  item_input_layer[0][0]           
 __________________________________________________________________________________________________
-item_id_embedding (Embedding)   multiple             320064      user_click_item_seq_input_layer[0
-                                                                 item_input_layer[0][0]           
-__________________________________________________________________________________________________
-cate_id_embedding (Embedding)   multiple             13696       user_click_cate_seq_input_layer[0
+cate_id_embedding (Embedding)   multiple             109568      user_click_cate_seq_input_layer[0
                                                                  cate_input_layer[0][0]           
 __________________________________________________________________________________________________
-tf_op_layer_Equal_3 (TensorFlow [(None, 51)]         0           concatenate_92[0][0]             
+tf_op_layer_Cast (TensorFlowOpL [(None, 50)]         0           tf_op_layer_Equal[0][0]          
 __________________________________________________________________________________________________
-concatenate_94 (Concatenate)    (None, 51, 64)       0           item_id_embedding[0][0]          
-                                                                 item_id_embedding[1][0]          
-__________________________________________________________________________________________________
-concatenate_95 (Concatenate)    (None, 51, 64)       0           cate_id_embedding[0][0]          
-                                                                 cate_id_embedding[1][0]          
-__________________________________________________________________________________________________
-tf_op_layer_Cast_3 (TensorFlowO [(None, 51)]         0           tf_op_layer_Equal_3[0][0]        
+tf_op_layer_Equal_1 (TensorFlow [(None, 50)]         0           user_click_item_seq_input_layer[0
 __________________________________________________________________________________________________
 user_id_input_layer (InputLayer [(None, 1)]          0                                            
 __________________________________________________________________________________________________
@@ -43,50 +37,59 @@ gender_input_layer (InputLayer) [(None, 1)]          0
 __________________________________________________________________________________________________
 age_input_layer (InputLayer)    [(None, 1)]          0                                            
 __________________________________________________________________________________________________
-concatenate_96 (Concatenate)    (None, 51, 128)      0           concatenate_94[0][0]             
-                                                                 concatenate_95[0][0]             
+concatenate_1 (Concatenate)     (None, 50, 1024)     0           item_id_embedding[0][0]          
+                                                                 cate_id_embedding[0][0]          
 __________________________________________________________________________________________________
-tf_op_layer_strided_slice_3 (Te [(None, 1, 1, 51)]   0           tf_op_layer_Cast_3[0][0]         
+tf_op_layer_strided_slice (Tens [(None, 1, 1, 50)]   0           tf_op_layer_Cast[0][0]           
 __________________________________________________________________________________________________
-user_id_embedding_layer (Embedd (None, 1, 64)        19264       user_id_input_layer[0][0]        
+tf_op_layer_Cast_1 (TensorFlowO [(None, 50)]         0           tf_op_layer_Equal_1[0][0]        
 __________________________________________________________________________________________________
-gender_embedding_layer (Embeddi (None, 1, 64)        192         gender_input_layer[0][0]         
+user_id_embedding_layer (Embedd (None, 1, 512)       154112      user_id_input_layer[0][0]        
 __________________________________________________________________________________________________
-age_embedding_layer (Embedding) (None, 1, 64)        704         age_input_layer[0][0]            
+gender_embedding_layer (Embeddi (None, 1, 512)       1536        gender_input_layer[0][0]         
 __________________________________________________________________________________________________
-encoder_21 (Encoder)            (None, 51, 128)      659712      concatenate_96[0][0]             
+age_embedding_layer (Embedding) (None, 1, 512)       5632        age_input_layer[0][0]            
 __________________________________________________________________________________________________
-concatenate_93 (Concatenate)    (None, 1, 192)       0           user_id_embedding_layer[0][0]    
+concatenate_2 (Concatenate)     (None, 1, 1024)      0           item_id_embedding[1][0]          
+                                                                 cate_id_embedding[1][0]          
+__________________________________________________________________________________________________
+encoder (Encoder)               (None, 50, 1024)     12603392    concatenate_1[0][0]              
+                                                                 tf_op_layer_strided_slice[0][0]  
+__________________________________________________________________________________________________
+tf_op_layer_strided_slice_1 (Te [(None, 1, 50)]      0           tf_op_layer_Cast_1[0][0]         
+__________________________________________________________________________________________________
+concatenate (Concatenate)       (None, 1, 1536)      0           user_id_embedding_layer[0][0]    
                                                                  gender_embedding_layer[0][0]     
                                                                  age_embedding_layer[0][0]        
 __________________________________________________________________________________________________
-tf_op_layer_Reshape_15 (TensorF [(None, 6528)]       0           encoder_21[0][0]                 
+din_attention_layer (DinAttenti (None, 1, 1024)      5244928     concatenate_2[0][0]              
+                                                                 encoder[0][0]                    
+                                                                 encoder[0][0]                    
+                                                                 tf_op_layer_strided_slice_1[0][0]
 __________________________________________________________________________________________________
-tf_op_layer_Reshape_14 (TensorF [(None, 192)]        0           concatenate_93[0][0]             
+concatenate_3 (Concatenate)     (None, 1, 2560)      0           concatenate[0][0]                
+                                                                 din_attention_layer[0][0]        
 __________________________________________________________________________________________________
-concatenate_97 (Concatenate)    (None, 6720)         0           tf_op_layer_Reshape_15[0][0]     
-                                                                 tf_op_layer_Reshape_14[0][0]     
+tf_op_layer_Squeeze (TensorFlow [(None, 2560)]       0           concatenate_3[0][0]              
 __________________________________________________________________________________________________
-FC_1 (Dense)                    (None, 2056)         13818376    concatenate_97[0][0]             
+FC_1 (Dense)                    (None, 512)          1311232     tf_op_layer_Squeeze[0][0]        
 __________________________________________________________________________________________________
-dropout_1 (Dropout)             (None, 2056)         0           FC_1[0][0]                       
+dropout_1 (Dropout)             (None, 512)          0           FC_1[0][0]                       
 __________________________________________________________________________________________________
-FC_2 (Dense)                    (None, 512)          1053184     dropout_1[0][0]                  
+FC_2 (Dense)                    (None, 128)          65664       dropout_1[0][0]                  
 __________________________________________________________________________________________________
-dropout_2 (Dropout)             (None, 512)          0           FC_2[0][0]                       
+dropout_2 (Dropout)             (None, 128)          0           FC_2[0][0]                       
 __________________________________________________________________________________________________
-FC_3 (Dense)                    (None, 32)           16416       dropout_2[0][0]                  
+FC_3 (Dense)                    (None, 32)           4128        dropout_2[0][0]                  
 __________________________________________________________________________________________________
 dropout_3 (Dropout)             (None, 32)           0           FC_3[0][0]                       
 __________________________________________________________________________________________________
 Sigmoid_output_layer (Dense)    (None, 1)            33          dropout_3[0][0]                  
 ==================================================================================================
-Total params: 15,901,641
-Trainable params: 15,901,641
+Total params: 22,060,737
+Trainable params: 22,060,737
 Non-trainable params: 0
-__________________________________________________________________________________________________
-None
-​
+
 
 ```
 
@@ -100,4 +103,7 @@ None
 2. https://zhuanlan.zhihu.com/p/161311198
 
 3. https://github.com/czy36mengfei/tensorflow2_tutorials_chinese/tree/master/026-Transformer
+
+4. https://github.com/shenweichen/DeepCTR/blob/master/deepctr/layers/sequence.py
+
 ```
