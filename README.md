@@ -45,3 +45,28 @@
 > https://github.com/shenweichen/DeepCTR
 
 > https://github.com/shenweichen/DeepMatch
+
+
+# 待学习及分享
+
+## 召回
+
+[Poly-encoders: Transformer Architectures and Pre-training Strategies for Fast and Accurate Multi-sentence Scoring](https://arxiv.org/abs/1905.01969v3)
+
+## 粗排
+
+[COLD: Towards the Next Generation of Pre-Ranking System](https://arxiv.org/abs/2007.16122)
+
+
+## 精排
+
+DIN [Deep Interest Network for Click-Through Rate Prediction](https://arxiv.org/abs/1706.06978)
+
+DIEN [Deep Interest Evolution Network for Click-Through Rate Prediction](https://arxiv.org/pdf/1809.03672.pdf)
+
+代码： [https://github.com/mouna99/dien](https://github.com/mouna99/dien)
+
+MIMN [Practice on Long Sequential User Behavior Modeling for Click-Through Rate Prediction](https://arxiv.org/pdf/1905.09248.pdf)
+
+Search-based Interest Model [Search-based User Interest Modeling with Lifelong Sequential
+Behavior Data for Click-Through Rate Prediction](https://arxiv.org/pdf/2006.05639.pdf)
