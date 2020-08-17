@@ -60,13 +60,12 @@
 
 ## 精排
 
-DIN [Deep Interest Network for Click-Through Rate Prediction](https://arxiv.org/abs/1706.06978)
+DIN：[Deep Interest Network for Click-Through Rate Prediction](https://arxiv.org/abs/1706.06978)
 
-DIEN [Deep Interest Evolution Network for Click-Through Rate Prediction](https://arxiv.org/pdf/1809.03672.pdf)
-
+DIEN：[Deep Interest Evolution Network for Click-Through Rate Prediction](https://arxiv.org/pdf/1809.03672.pdf)，
 代码： [https://github.com/mouna99/dien](https://github.com/mouna99/dien)
 
-MIMN [Practice on Long Sequential User Behavior Modeling for Click-Through Rate Prediction](https://arxiv.org/pdf/1905.09248.pdf)
+MIMN：[Practice on Long Sequential User Behavior Modeling for Click-Through Rate Prediction](https://arxiv.org/pdf/1905.09248.pdf)
 
-Search-based Interest Model [Search-based User Interest Modeling with Lifelong Sequential
+Search-based Interest Model：[Search-based User Interest Modeling with Lifelong Sequential
 Behavior Data for Click-Through Rate Prediction](https://arxiv.org/pdf/2006.05639.pdf)
