@@ -5,10 +5,10 @@
 
 | 算法        | 论文    |  公众号或知乎文章介绍  |
 | --------    | -----  | ----            |
-| word2vec        | [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/abs/1301.3781v3) |  |
+| Word2vec        | [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/abs/1301.3781v3) |  |
 | YouTubeNet      | [Deep Neural Networks for YouTube Recommendations](https://www.sci-hub.ren/10.1145/2959100.2959190) | [推荐系统召回模型之YouTubeNet](https://mp.weixin.qq.com/s/hiabDQW0qGfgPwiZdiZ_Mg) |
 | DSSM      | [Sampling-Bias-Corrected Neural Modeling for Large Corpus Item Recommendations](https://www.sci-hub.ren/10.1145/3298689.3346996) | [实践DSSM召回模型](https://zhuanlan.zhihu.com/p/136253355) |
-| mind            | [Multi-Interest Network with Dynamic Routing for Recommendation at Tmall](https://arxiv.org/abs/1904.08030v1) | [推荐系统召回模型之MIND用户多兴趣网络实践](https://mp.weixin.qq.com/s/Ys4EZw97ulrcBWFdN1OMyQ) |
+| MIND            | [Multi-Interest Network with Dynamic Routing for Recommendation at Tmall](https://arxiv.org/abs/1904.08030v1) | [推荐系统召回模型之MIND用户多兴趣网络实践](https://mp.weixin.qq.com/s/Ys4EZw97ulrcBWFdN1OMyQ) |
 
 
 ## 2. Rank
@@ -16,7 +16,7 @@
 | 算法        | 论文    |  公众号文章介绍  |
 | --------    | -----  | ----            |
 | FFM        | [Field-aware Factorization Machines for CTR Prediction](https://www.csie.ntu.edu.tw/~cjlin/papers/ffm.pdf) | [FFM算法原理及Bi-FFM算法实现](https://mp.weixin.qq.com/s/T46HbKC-_9yYzVTgl8Fh8w) |
-| wide_and_deep      | [Wide & Deep Learning for Recommender Systems](https://arxiv.org/abs/1606.07792) |  |
+| Wide & Deep      | [Wide & Deep Learning for Recommender Systems](https://arxiv.org/abs/1606.07792) |  |
 | NFM            | [Neural Factorization Machines for Sparse Predictive Analytics](https://arxiv.org/pdf/1708.05027.pdf) | [NFM模型理论与实践](https://mp.weixin.qq.com/s/1sWYlzIydiLAPMBnr-a5sQ) |
 | AFM            | [Attentional Factorization Machines: Learning the Weight of Feature Interactions via Attention Networks](https://arxiv.org/pdf/1708.04617.pdf) | [注意力机制在深度推荐算法中的应用之AFM模型](https://mp.weixin.qq.com/s/sj5bxwtgiw-SaIItsjbeew) |
 | DeepFM            | [DeepFM: A Factorization-Machine based Neural Network for CTR Prediction](https://arxiv.org/abs/1703.04247) | [DeepFM实践](https://zhuanlan.zhihu.com/p/137894818) |
@@ -24,19 +24,20 @@
 
 
 
-## 3. 多任务 Rank
+## 3. Multi-Task
 
 | 算法        | 论文    |  公众号文章介绍  |
 | --------    | -----  | ----            |
-| esmm        | [Entire Space Multi-Task Model: An Effective Approach for Estimating Post-Click Conversion Rate](https://arxiv.org/abs/1804.07931) | [ESMM多任务学习算法在推荐系统中的应用](https://mp.weixin.qq.com/s/x521rMWLf6CLk0e2uXEJng) |
+| ESMM        | [Entire Space Multi-Task Model: An Effective Approach for Estimating Post-Click Conversion Rate](https://arxiv.org/abs/1804.07931) | [ESMM多任务学习算法在推荐系统中的应用](https://mp.weixin.qq.com/s/x521rMWLf6CLk0e2uXEJng) |
 | MMoE      | [Modeling Task Relationships in Multi-task Learning with Multi-gate Mixture-of-Experts](https://dl.acm.org/doi/10.1145/3219819.3220007) | [多任务学习之MMOE模型](https://mp.weixin.qq.com/s/cBy0Y5xDtkc6PxhF1HNomg) |
 
 
-## 4. recall_search
+## 4. Recall_ANN
 
 | 算法        | 开源地址    |  公众号文章介绍  |
 | --------    | -----  | ----            |
 | Annoy        | [https://github.com/spotify/annoy](https://github.com/spotify/annoy) | [Annoy最近邻检索技术之 “图片检索”](https://zhuanlan.zhihu.com/p/148819536) |
+|Faiss|[https://github.com/facebookresearch/faiss](https://github.com/facebookresearch/faiss)||
 
 
 
@@ -49,16 +50,19 @@
 
 # 待学习及分享
 
-## 召回
+## Recall
 
 [Poly-encoders: Transformer Architectures and Pre-training Strategies for Fast and Accurate Multi-sentence Scoring](https://arxiv.org/abs/1905.01969v3)
 
-## 粗排
+[Controllable Multi-Interest Framework for Recommendation](https://static.aminer.cn/storage/pdf/arxiv/20/2005/2005.09347.pdf)，
+代码：[https://github.com/THUDM/ComiRec](https://github.com/THUDM/ComiRec)
+
+## Pre-Rank
 
 [COLD: Towards the Next Generation of Pre-Ranking System](https://arxiv.org/abs/2007.16122)
 
 
-## 精排
+## Rank
 
 DIN：[Deep Interest Network for Click-Through Rate Prediction](https://arxiv.org/abs/1706.06978)
 
@@ -69,3 +73,7 @@ MIMN：[Practice on Long Sequential User Behavior Modeling for Click-Through Rat
 
 Search-based Interest Model：[Search-based User Interest Modeling with Lifelong Sequential
 Behavior Data for Click-Through Rate Prediction](https://arxiv.org/pdf/2006.05639.pdf)
+
+
+## Multi-Task
+YouTube，2019: Recommending What Video to Watch Next-A Multitask Ranking System
